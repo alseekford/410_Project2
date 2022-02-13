@@ -24,7 +24,7 @@ Prediction Equation for Locally Weighted Linear Regression:
 
 
 
-##### How did we get this equation from a simple linear equation?
+##### How did we get this LOWESS prediction equation from a simple linear equation?
 
 First, linear regression - the assumption that: 
 
@@ -77,14 +77,61 @@ Finally, that takes us to the locally weighted regression we have:
 
 
 
-
-* Math equations
+##### Code and Methods
 
 ```markdown
 
-`Code` text
+  This Lowess Regressor was used to "fit" the data:
+  
+  ' def lowess_reg(x, y, xnew, kern, tau):
+    # tau is called bandwidth K((x-x[i])/(2*tau))
+    # We expect x to the sorted increasingly
+    n = len(x)
+    yest = np.zeros(n)
+
+    #Initializing all weights from the bell shape kernel function    
+    w = np.array([kern((x - x[i])/(2*tau)) for i in range(n)])     
+    
+    #Looping through all x-points
+    for i in range(n):
+        weights = w[:, i]
+        b = np.array([np.sum(weights * y), np.sum(weights * y * x)])
+        A = np.array([[np.sum(weights), np.sum(weights * x)],
+                    [np.sum(weights * x), np.sum(weights * x * x)]])
+        #theta = linalg.solve(A, b) # A*theta = b
+        theta, res, rnk, s = linalg.lstsq(A, b)
+        yest[i] = theta[0] + theta[1] * x[i] 
+    f = interp1d(x, yest,fill_value='extrapolate')
+    return f(xnew) '
 
 ```
+  
+```markdown
+
+  Additionally, I ran the regressor on three distinct kernels: Tricubic, Epanechnikov, and Quartic
+  - Each kernel was specified in the "kern" parameter in the lowess_reg function
+  
+  'def tricubic(x):
+  if len(x.shape) == 1:
+    x = x.reshape(-1,1)
+  d = np.sqrt(np.sum(x**2,axis=1))
+  return np.where(d>1,0,70/81*(1-d**3)**3)'
+  
+  'def Epanechnikov(x):
+  return np.where(np.abs(x)>1,0,3/4*(1-np.abs(x)**2)) '
+  
+  'def Quartic(x):
+  return np.where(np.abs(x)>1,0,15/16*(1-np.abs(x)**2)**2) '
+
+```
+  
+    
+```markdown
+
+  I estimated a value for the LOWESS regressor using each kernel and k-fold cross validation with 10 splits to compare results.
+
+```
+  
 
 ### Random Forest
 
