@@ -19,13 +19,48 @@ Stemming from Linear Regression, LOWESS can be considered a non-parametric algor
 
 
 ```markdown
-Code
+Equation for Locally Weighted Linear Regression:
+$$  \large \hat{y} = X (X^{T}WX)^{-1}(X^{T}Wy) $$
 
-$$y = X \cdot \beta + \sigma \epsilon$$
-
-`Code` text
+- $ \hat{y}$ is obtained as a different linear combination of the values of y
 
 ```
+
+How did we get this equation from a simple linear equation?
+```markdown
+
+First, linear regression - the assumption that: $$\ y = X\cdot\beta +\sigma\epsilon $$. 
+
+So, if we pre-multiply this equation with a **matrix** of weights we get: $$\ W(i)y = W(i)X\cdot\beta +\sigma W(i)\epsilon $$. Keep in mind here that *the "weights" are on the main diagonal and the rest of the elements are 0*. 
+
+- The independent observations are the rows of the matrix $X$ 
+- Each row has a given number of columns (*number of features*), denoted by $p$. 
+- Thus, every row is a vector in $\mathbb{R}^p$. 
+- The distance between two independent observations is the **Euclidean distance** between the two represented $p$-dimensional vectors. Euclidean distance is also commonly referred to as *L2 Norm*. 
+
+As a result, this equation is as follows: $$ dist(\vec{v}, \vec{w}) = \sqrt{(v_1 - w_1)^2 + (v_2 - w_2)^2 + ... + (v_p - w_p)^2}$$
+- We shall have $n$ differenct weight vectors because we have $n$ different observations. 
+
+
+**Linear regression can be seen as a linear combination of the observed outputs, or values of the target.**
+
+  - To get to LOWESS, we have: $$ X^Ty = X^TX\beta + \sigma X ^T\epsilon $$
+  - We solve for $\beta$ (by assuming that $X^TX$ is invertible): 
+  $$ \large \beta = (X^TX)^{-1}(X^Ty) - \sigma (X^TX)^{-1} X^T \epsilon $$
+  - We take the expected value of this equation and obtain: 
+  $$ \large \hat\beta = (X^TX)^{-1}(X^Ty) $$
+  - Therefore, the predictions we make are: $$ \large \hat{y} = X \hat\beta $$
+
+For the locally weighted regression we have:
+**$$  \large \hat{y} = X (X^{T}WX)^{-1}(X^{T}Wy) $$**
+
+
+  - For LOWESS, $ \hat{y}$ is obtained as a different linear combination of the values of y.
+
+```
+**In Locally Weighted Linear Regression, the predictions made are a linear combination of the actual observed values of the dependent variable.**
+
+
 
 
 * Math equations
