@@ -159,9 +159,28 @@ I estimated a value for the LOWESS regressor using each kernel and k-fold cross 
 
 ### Random Forest
 
-* Describe Decision trees*
-* Describe RF
-* Math equations
+  
+##### Decision Trees
+  
+  In a similar way to how LOWESS stems from linear regression, random forests are built upon decision trees. 
+  Decision trees can be used to solve classification and regression problems, consisting of a top-down structure where each internal node represents a "test" on an attribute, each branch represents the outcome of the test, and each leaf node represents a class label (Liberman, 2020).  
+  
+  <p align = 'center'> <img width="627" alt="Screen Shot 2022-02-13 at 4 08 30 PM" src="https://user-images.githubusercontent.com/71660299/153775123-7eec698a-2374-4325-87c6-9c39efdd6fe7.png">
+    
+ <p align = 'center'>   <img width="517" alt="Screen Shot 2022-02-13 at 4 09 02 PM" src="https://user-images.githubusercontent.com/71660299/153775134-af560130-817a-4c04-bafd-b827cbcead8f.png"> (Javapoint)
+
+
+  
+##### Random Forests
+  
+  In order to minimize bias and error (due to variance) in decision trees, we can introduce a random forest. Simply put, a random forest is a series of decision trees. 
+  To reduce variance, random forest (as applied in this Boston Housing example) seperates the data into training and testing samples. In this case, 25% of the data went to test, while the remaining 75% was trained. An additional benefit of random forest is it prevents overfitting. 
+   
+   
+Here is an example of the structure: 
+   
+ <p align = 'center'>  <img width="665" alt="Screen Shot 2022-02-13 at 4 12 20 PM" src="https://user-images.githubusercontent.com/71660299/153775240-695a0dc8-95b6-434c-a005-c634c2ec240f.png"> (Javapoint)
+
 
   
 For Random Forest, I fit on the scaled data and plotted the results: 
@@ -218,14 +237,25 @@ Syntax highlighted code block
 ```
 
 For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+     
+     
 
 ### References
 
+Liberman, N. (2020, May 21). Decision trees and random forests. Medium. Retrieved February 13, 2022, from https://towardsdatascience.com/decision-trees-and-random-forests-df0c3123f991 
+     
 Figueira, J. P. (2021, June 1). Loess. Medium. Retrieved February 13, 2022, from https://towardsdatascience.com/loess-373d43b03564 
+     
+Machine learning decision tree classification algorithm - javatpoint. www.javatpoint.com. (n.d.). Retrieved February 13, 2022, from https://www.javatpoint.com/machine-learning-decision-tree-classification-algorithm 
+     
+Machine learning random forest algorithm - javatpoint. www.javatpoint.com. (n.d.). Retrieved February 13, 2022, from https://www.javatpoint.com/machine-learning-random-forest-algorithm 
+     
 
 ### Jekyll Themes
 
 Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/alseekford/410_Project2/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+     
+     
 
 ### Support or Contact
 
