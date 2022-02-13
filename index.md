@@ -21,44 +21,19 @@ Stemming from Linear Regression, LOWESS can be considered a non-parametric algor
 ```markdown
 Code
 
-- $y = X \cdot \beta + \sigma \epsilon$ 
+$$y = X \cdot \beta + \sigma \epsilon$$
 
+`Code` text
 
-# Header 1
-## Header 2
-### Header 3
-
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
 
 
 * Math equations
 
 ```markdown
-Code
 
-# Header 1
-## Header 2
-### Header 3
+`Code` text
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
 
 ### Random Forest
