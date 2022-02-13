@@ -2,6 +2,20 @@
 
 Anne Louise Seekford
 
+### Overview
+
+For project two, I applied two regression techniques on the Boston Housing Dataset. The Boston Housing Dataset is derived from information collected by the U.S. Census Service concerning homes in the area of Boston, Massachusetts. Although the dataset contains over fifteen columns, each a distinct characteristic of a home in Boston, I will be focusing on only two. The input feature will be 'rooms', describing the average number of rooms per dwelling. The target, which will be predicted, is 'cmedv', the median value of owener-occupied homes (in thousands of dollars). 
+
+Snippet of Dataset: 
+<img width="1272" alt="Screen Shot 2022-02-12 at 9 25 52 PM" src="https://user-images.githubusercontent.com/71660299/153735617-137a6461-dc26-4c5e-b3de-52f41bd64b56.png">
+
+
+### Locally Weighted Linear Regression (LOWESS)
+
+
+
+### Random Forest
+
 
 
 ### Markdown
