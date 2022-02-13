@@ -129,7 +129,8 @@ Finally, that takes us to the locally weighted regression we have:
 ```markdown
 
   I estimated a value for the LOWESS regressor using each kernel and k-fold cross validation 
-  with 10 splits to compare results, which are as follows: 
+  with 10 splits.
+  To compare results, I calculated the mean squared error of each, which are as follows: 
   
   - LOWESS Tricubic 10-Fold Cross Validated MSE = $36,384.16
   - LOWESS Epanechnikov 10-Fold Cross Validated MSE = $36,453.06
