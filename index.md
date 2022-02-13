@@ -13,7 +13,28 @@ Descriptions of my process, code, and methods used will be described as follows:
 
 ### Locally Weighted Linear Regression (LOWESS)
 
-* Describe LOWESS*
+Stemming from Linear Regression, LOWESS can be considered a non-parametric algorithm that must use all the dataset for estimation (Figueira, 2021). 
+
+* Math equations
+
+```markdown
+Code
+
+# Header 1
+## Header 2
+### Header 3
+
+- Bulleted
+- List
+
+1. Numbered
+2. List
+
+**Bold** and _Italic_ and `Code` text
+
+[Link](url) and ![Image](src)
+```
+
 
 * Math equations
 
@@ -83,6 +104,10 @@ Syntax highlighted code block
 ```
 
 For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+
+### References
+
+Figueira, J. P. (2021, June 1). Loess. Medium. Retrieved February 13, 2022, from https://towardsdatascience.com/loess-373d43b03564 
 
 ### Jekyll Themes
 
