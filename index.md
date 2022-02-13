@@ -13,10 +13,51 @@ Descriptions of my process, code, and methods used will be described as follows:
 
 ### Locally Weighted Linear Regression (LOWESS)
 
+* Describe LOWESS*
 
+* Math equations
+
+```markdown
+Code
+
+# Header 1
+## Header 2
+### Header 3
+
+- Bulleted
+- List
+
+1. Numbered
+2. List
+
+**Bold** and _Italic_ and `Code` text
+
+[Link](url) and ![Image](src)
+```
 
 ### Random Forest
 
+* Describe Decision trees*
+* Describe RF
+* Math equations
+
+```markdown
+Code
+
+# Header 1
+## Header 2
+### Header 3
+
+- Bulleted
+- List
+
+1. Numbered
+2. List
+
+**Bold** and _Italic_ and `Code` text
+
+[Link](url) and ![Image](src)
+```
 
 
 ### Markdown
