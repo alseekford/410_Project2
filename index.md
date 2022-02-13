@@ -151,6 +151,14 @@ I estimated a value for the LOWESS regressor using each kernel and k-fold cross 
   
 For Random Forest, I fit on the scaled data and plotted the results: 
   
+  
+```markdown
+ `rf_model = RandomForestRegressor(n_estimators=150, max_depth=3)`
+ `rf_model.fit(xtrain_scaled, ytrain)`
+ `rf_yhat = rf_model.predict(xtest_scaled)`
+```  
+  
+  
  <p align = 'center'> <img width="631" alt="Screen Shot 2022-02-13 at 3 35 20 PM" src="https://user-images.githubusercontent.com/71660299/153773840-a73fac7e-06a9-45e9-8ed4-7181a1d04455.png">
    
 In order to improve upon this plot, it was necessary to sort the matrix by x values.
