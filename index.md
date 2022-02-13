@@ -83,7 +83,7 @@ Finally, that takes us to the locally weighted regression we have:
 
   This Lowess Regressor was used to "fit" the data:
   
-  ' def lowess_reg(x, y, xnew, kern, tau):
+  'def lowess_reg(x, y, xnew, kern, tau):
     # tau is called bandwidth K((x-x[i])/(2*tau))
     # We expect x to the sorted increasingly
     n = len(x)
@@ -102,7 +102,7 @@ Finally, that takes us to the locally weighted regression we have:
         theta, res, rnk, s = linalg.lstsq(A, b)
         yest[i] = theta[0] + theta[1] * x[i] 
     f = interp1d(x, yest,fill_value='extrapolate')
-    return f(xnew) '
+    return f(xnew)'
 
 ```
   
@@ -118,17 +118,23 @@ Finally, that takes us to the locally weighted regression we have:
   return np.where(d>1,0,70/81*(1-d**3)**3)'
   
   'def Epanechnikov(x):
-  return np.where(np.abs(x)>1,0,3/4*(1-np.abs(x)**2)) '
+  return np.where(np.abs(x)>1,0,3/4*(1-np.abs(x)**2))'
   
   'def Quartic(x):
-  return np.where(np.abs(x)>1,0,15/16*(1-np.abs(x)**2)**2) '
+  return np.where(np.abs(x)>1,0,15/16*(1-np.abs(x)**2)**2)'
 
 ```
   
     
 ```markdown
 
-  I estimated a value for the LOWESS regressor using each kernel and k-fold cross validation with 10 splits to compare results.
+  I estimated a value for the LOWESS regressor using each kernel and k-fold cross validation 
+  with 10 splits to compare results, which are as follows: 
+  
+  - LOWESS Tricubic 10-Fold Cross Validated MSE = $36,384.16
+  - LOWESS Epanechnikov 10-Fold Cross Validated MSE = $36,453.06
+  - LOWESS Quartic 10-Fold Cross Validated MSE = $36,341.57
+  
 
 ```
   
