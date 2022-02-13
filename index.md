@@ -79,10 +79,9 @@ Finally, that takes us to the locally weighted regression we have:
 
 ##### Code and Methods
 
+  This Lowess Regressor was used to "fit" the data:
 ```markdown
 
-  This Lowess Regressor was used to "fit" the data:
-  
   'def lowess_reg(x, y, xnew, kern, tau):
     # tau is called bandwidth K((x-x[i])/(2*tau))
     # We expect x to the sorted increasingly
@@ -106,11 +105,13 @@ Finally, that takes us to the locally weighted regression we have:
 
 ```
   
-```markdown
-
-  Additionally, I ran the regressor on three distinct kernels: Tricubic, Epanechnikov, and Quartic
+  
+    Additionally, I ran the regressor on three distinct kernels: Tricubic, Epanechnikov, and Quartic
   - Each kernel was specified in the "kern" parameter in the lowess_reg function
   
+```markdown
+
+
   'def tricubic(x):
   if len(x.shape) == 1:
     x = x.reshape(-1,1)
@@ -125,12 +126,13 @@ Finally, that takes us to the locally weighted regression we have:
 
 ```
   
-    
-```markdown
-
-  I estimated a value for the LOWESS regressor using each kernel and k-fold cross validation 
+I estimated a value for the LOWESS regressor using each kernel and k-fold cross validation 
   with 10 splits.
   To compare results, I calculated the mean squared error of each, which are as follows: 
+  
+```markdown
+
+
   
   - LOWESS Tricubic 10-Fold Cross Validated MSE = $36,384.16
   - LOWESS Epanechnikov 10-Fold Cross Validated MSE = $36,453.06
