@@ -20,6 +20,7 @@ Prediction Equation for Locally Weighted Linear Regression:
 
 <p align = 'center'> <img width="306" alt="Screen Shot 2022-02-12 at 11 19 23 PM" src="https://user-images.githubusercontent.com/71660299/153738433-1c60e39b-c996-48df-8b3d-4cea7e03a88f.png">
 
+  
 - *yhat* is obtained as a different linear combination of the values of y
 
 
@@ -29,11 +30,14 @@ Prediction Equation for Locally Weighted Linear Regression:
 First, linear regression - the assumption that: 
 
   <p align = 'center'>    <img width="171" alt="Screen Shot 2022-02-12 at 11 15 56 PM" src="https://user-images.githubusercontent.com/71660299/153738371-656b4681-e83f-4daf-8322-3f9646b9b8d3.png">
+    
 
 So, if we pre-multiply this equation with a **matrix** of weights we get: 
+    
        
 <p align = 'center'> <img width="333" alt="Screen Shot 2022-02-12 at 11 19 48 PM" src="https://user-images.githubusercontent.com/71660299/153738443-5b0e3cc1-36f2-478e-a0f5-5302de978eef.png">. 
        
+  
 Keep in mind here that *the "weights" are on the main diagonal and the rest of the elements are 0*. 
 
 - The independent observations are the rows of the matrix *X* 
@@ -43,7 +47,9 @@ Keep in mind here that *the "weights" are on the main diagonal and the rest of t
 
 As a result, this equation is as follows: 
   
+  
 <p align = 'center'> <img width="471" alt="Screen Shot 2022-02-12 at 11 21 10 PM" src="https://user-images.githubusercontent.com/71660299/153738473-32a25afa-f337-46b9-befd-6945e3f18e4e.png">
+  
   
 - We shall have $n$ differenct weight vectors because we have $n$ different observations. 
 
@@ -51,25 +57,35 @@ As a result, this equation is as follows:
 **Linear regression can be seen as a linear combination of the observed outputs, or values of the target.**
 
   - To get to LOWESS, we have: 
+  
      
 <p align = 'center'> <img width="202" alt="Screen Shot 2022-02-12 at 11 21 35 PM" src="https://user-images.githubusercontent.com/71660299/153738477-c853bb25-d0ae-46ff-8fd6-d16012620541.png">
   
+  
   - We solve for *beta* (by assuming that *X^TX* is invertible): 
+  
  
 <p align = 'center'> <img width="415" alt="Screen Shot 2022-02-12 at 11 22 31 PM" src="https://user-images.githubusercontent.com/71660299/153738494-34e34fe8-6d8e-4bf8-836c-36cc95c3e7aa.png">
- 
+  
+
   - We take the expected value of this equation and obtain: 
+  
  
 <p align = 'center'> <img width="222" alt="Screen Shot 2022-02-12 at 11 22 55 PM" src="https://user-images.githubusercontent.com/71660299/153738503-898e6df6-59bf-4b19-a30e-dc46c0ae5f33.png">
   
+
   - Therefore, the predictions we make are: 
   
+  
  <p align = 'center'> <img width="97" alt="Screen Shot 2022-02-12 at 11 23 32 PM" src="https://user-images.githubusercontent.com/71660299/153738521-a46d9795-d3ce-4b79-802d-408f5381a789.png">
+   
 
 
 Finally, that takes us to the locally weighted regression we have:
+   
  
 <p align = 'center'> <img width="306" alt="Screen Shot 2022-02-12 at 11 19 23 PM" src="https://user-images.githubusercontent.com/71660299/153738433-1c60e39b-c996-48df-8b3d-4cea7e03a88f.png">
+  
 
    
 
@@ -160,10 +176,13 @@ For Random Forest, I fit on the scaled data and plotted the results:
   
  <p align = 'center'> <img width="631" alt="Screen Shot 2022-02-13 at 3 35 20 PM" src="https://user-images.githubusercontent.com/71660299/153773840-a73fac7e-06a9-45e9-8ed4-7181a1d04455.png">
    
+   
 In order to improve upon this plot, it was necessary to sort the matrix by x values.
    By doing so, the y values will move accordingly and the plot improved signficantly. 
    
+   
    <p align = 'center'>  <img width="663" alt="Screen Shot 2022-02-13 at 3 36 41 PM" src="https://user-images.githubusercontent.com/71660299/153773892-c1934e46-a971-4988-9623-a606d420c438.png">
+     
 
 
 To compare the results of the Random Forest Regressor with LOWESS, the mean squared error was 
