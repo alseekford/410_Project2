@@ -148,22 +148,24 @@ I estimated a value for the LOWESS regressor using each kernel and k-fold cross 
 * Describe RF
 * Math equations
 
+  
+For Random Forest, I fit on the scaled data and plotted the results: 
+  
+ <p align = 'center'> <img width="631" alt="Screen Shot 2022-02-13 at 3 35 20 PM" src="https://user-images.githubusercontent.com/71660299/153773840-a73fac7e-06a9-45e9-8ed4-7181a1d04455.png">
+   
+In order to improve upon this plot, it was necessary to sort the matrix by x values.
+   By doing so, the y values will move accordingly and the plot improved signficantly. 
+   
+   <p align = 'center'>  <img width="663" alt="Screen Shot 2022-02-13 at 3 36 41 PM" src="https://user-images.githubusercontent.com/71660299/153773892-c1934e46-a971-4988-9623-a606d420c438.png">
+
+
+To compare the results of the Random Forest Regressor with LOWESS, the mean squared error was 
+     calculated using 10-fold cross validation. 
+     
+     
+  
 ```markdown
-Code
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+Random Forest 10-Fold Cross Validated MSE = $33,366.94
 ```
 
 
