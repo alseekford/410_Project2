@@ -16,6 +16,8 @@ Descriptions of my process, code, and methods used will be described as follows:
 Stemming from Linear Regression, LOWESS can be considered a non-parametric algorithm that must use all the dataset for estimation (Figueira, 2021). 
 
 * Math equations
+$y = X\cdot\beta +\sigma\epsilon$ 
+
 
 ```markdown
 Code
@@ -24,7 +26,6 @@ Code
 ## Header 2
 ### Header 3
 
-$y = X\cdot\beta +\sigma\epsilon$ 
 
 - Bulleted
 - List
