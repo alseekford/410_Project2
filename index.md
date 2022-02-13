@@ -24,6 +24,8 @@ Code
 ## Header 2
 ### Header 3
 
+$y = X\cdot\beta +\sigma\epsilon$ 
+
 - Bulleted
 - List
 
