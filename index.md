@@ -82,11 +82,11 @@ Finally, that takes us to the locally weighted regression we have:
   This Lowess Regressor was used to "fit" the data:
 ```markdown
 
-  'def lowess_reg(x, y, xnew, kern, tau):
-    # tau is called bandwidth K((x-x[i])/(2*tau))
-    # We expect x to the sorted increasingly
-    n = len(x)
-    yest = np.zeros(n)
+  `def lowess_reg(x, y, xnew, kern, tau):
+      # tau is called bandwidth K((x-x[i])/(2*tau))
+      # We expect x to the sorted increasingly
+      n = len(x)
+      yest = np.zeros(n)
 
     #Initializing all weights from the bell shape kernel function    
     w = np.array([kern((x - x[i])/(2*tau)) for i in range(n)])     
@@ -101,7 +101,7 @@ Finally, that takes us to the locally weighted regression we have:
         theta, res, rnk, s = linalg.lstsq(A, b)
         yest[i] = theta[0] + theta[1] * x[i] 
     f = interp1d(x, yest,fill_value='extrapolate')
-    return f(xnew)'
+    return f(xnew)`
 
 ```
   
@@ -111,19 +111,18 @@ Additionally, I ran the regressor on three distinct kernels: Tricubic, Epanechni
   
 ```markdown
 
-
-  'def tricubic(x):
+  `def tricubic(x):
   if len(x.shape) == 1:
     x = x.reshape(-1,1)
   d = np.sqrt(np.sum(x**2,axis=1))
-  return np.where(d>1,0,70/81*(1-d**3)**3)'
+  return np.where(d>1,0,70/81*(1-d**3)**3)`
   
-  'def Epanechnikov(x):
-  return np.where(np.abs(x)>1,0,3/4*(1-np.abs(x)**2))'
+  `def Epanechnikov(x):
+  return np.where(np.abs(x)>1,0,3/4*(1-np.abs(x)**2))`
   
-  'def Quartic(x):
-  return np.where(np.abs(x)>1,0,15/16*(1-np.abs(x)**2)**2)'
-
+  `def Quartic(x):
+  return np.where(np.abs(x)>1,0,15/16*(1-np.abs(x)**2)**2)`
+  
 ```
   
 I estimated a value for the LOWESS regressor using each kernel and k-fold cross validation 
