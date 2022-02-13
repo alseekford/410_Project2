@@ -31,8 +31,10 @@ First, linear regression - the assumption that:
   <p align = 'center'>    <img width="171" alt="Screen Shot 2022-02-12 at 11 15 56 PM" src="https://user-images.githubusercontent.com/71660299/153738371-656b4681-e83f-4daf-8322-3f9646b9b8d3.png">
 
 So, if we pre-multiply this equation with a **matrix** of weights we get: 
-       <p align = 'center'> <img width="333" alt="Screen Shot 2022-02-12 at 11 19 48 PM" src="https://user-images.githubusercontent.com/71660299/153738443-5b0e3cc1-36f2-478e-a0f5-5302de978eef.png">. 
-       Keep in mind here that *the "weights" are on the main diagonal and the rest of the elements are 0*. 
+       
+<p align = 'center'> <img width="333" alt="Screen Shot 2022-02-12 at 11 19 48 PM" src="https://user-images.githubusercontent.com/71660299/153738443-5b0e3cc1-36f2-478e-a0f5-5302de978eef.png">. 
+       
+Keep in mind here that *the "weights" are on the main diagonal and the rest of the elements are 0*. 
 
 - The independent observations are the rows of the matrix *X* 
 - Each row has a given number of columns (*number of features*), denoted by *p*. 
@@ -40,7 +42,9 @@ So, if we pre-multiply this equation with a **matrix** of weights we get:
 - The distance between two independent observations is the **Euclidean distance** between the two represented $p$-dimensional vectors. Euclidean distance is also commonly referred to as *L2 Norm*. 
 
 As a result, this equation is as follows: 
+  
 <p align = 'center'> <img width="471" alt="Screen Shot 2022-02-12 at 11 21 10 PM" src="https://user-images.githubusercontent.com/71660299/153738473-32a25afa-f337-46b9-befd-6945e3f18e4e.png">
+  
 - We shall have $n$ differenct weight vectors because we have $n$ different observations. 
 
 
@@ -49,14 +53,18 @@ As a result, this equation is as follows:
   - To get to LOWESS, we have: 
      
 <p align = 'center'> <img width="202" alt="Screen Shot 2022-02-12 at 11 21 35 PM" src="https://user-images.githubusercontent.com/71660299/153738477-c853bb25-d0ae-46ff-8fd6-d16012620541.png">
+  
   - We solve for *beta* (by assuming that *X^TX* is invertible): 
  
 <p align = 'center'> <img width="415" alt="Screen Shot 2022-02-12 at 11 22 31 PM" src="https://user-images.githubusercontent.com/71660299/153738494-34e34fe8-6d8e-4bf8-836c-36cc95c3e7aa.png">
+ 
   - We take the expected value of this equation and obtain: 
  
 <p align = 'center'> <img width="222" alt="Screen Shot 2022-02-12 at 11 22 55 PM" src="https://user-images.githubusercontent.com/71660299/153738503-898e6df6-59bf-4b19-a30e-dc46c0ae5f33.png">
+  
   - Therefore, the predictions we make are: 
-      <p align = 'center'> <img width="97" alt="Screen Shot 2022-02-12 at 11 23 32 PM" src="https://user-images.githubusercontent.com/71660299/153738521-a46d9795-d3ce-4b79-802d-408f5381a789.png">
+  
+ <p align = 'center'> <img width="97" alt="Screen Shot 2022-02-12 at 11 23 32 PM" src="https://user-images.githubusercontent.com/71660299/153738521-a46d9795-d3ce-4b79-802d-408f5381a789.png">
 
 
 For the locally weighted regression we have:
