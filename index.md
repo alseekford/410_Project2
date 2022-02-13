@@ -16,11 +16,11 @@ Descriptions of my process, code, and methods used will be described as follows:
 Stemming from Linear Regression, LOWESS can be considered a non-parametric algorithm that must use all the dataset for estimation (Figueira, 2021). 
 
 
-Equation for Locally Weighted Linear Regression: 
+Prediction Equation for Locally Weighted Linear Regression: 
 
 <p align = 'center'> <img width="306" alt="Screen Shot 2022-02-12 at 11 19 23 PM" src="https://user-images.githubusercontent.com/71660299/153738433-1c60e39b-c996-48df-8b3d-4cea7e03a88f.png">
 
-- yhat is obtained as a different linear combination of the values of y
+- *yhat* is obtained as a different linear combination of the values of y
 
 
 
@@ -67,9 +67,11 @@ As a result, this equation is as follows:
  <p align = 'center'> <img width="97" alt="Screen Shot 2022-02-12 at 11 23 32 PM" src="https://user-images.githubusercontent.com/71660299/153738521-a46d9795-d3ce-4b79-802d-408f5381a789.png">
 
 
-For the locally weighted regression we have:
-**$$  \large \hat{y} = X (X^{T}WX)^{-1}(X^{T}Wy) $$**
+Finally, that takes us to the locally weighted regression we have:
+ 
+<p align = 'center'> <img width="306" alt="Screen Shot 2022-02-12 at 11 19 23 PM" src="https://user-images.githubusercontent.com/71660299/153738433-1c60e39b-c996-48df-8b3d-4cea7e03a88f.png">
 
+   
 ```
 **In Locally Weighted Linear Regression, the predictions made are a linear combination of the actual observed values of the dependent variable.**
 
