@@ -106,7 +106,7 @@ Finally, that takes us to the locally weighted regression we have:
 ```
   
   
-    Additionally, I ran the regressor on three distinct kernels: Tricubic, Epanechnikov, and Quartic
+Additionally, I ran the regressor on three distinct kernels: Tricubic, Epanechnikov, and Quartic
   - Each kernel was specified in the "kern" parameter in the lowess_reg function
   
 ```markdown
