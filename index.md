@@ -72,7 +72,7 @@ Finally, that takes us to the locally weighted regression we have:
 <p align = 'center'> <img width="306" alt="Screen Shot 2022-02-12 at 11 19 23 PM" src="https://user-images.githubusercontent.com/71660299/153738433-1c60e39b-c996-48df-8b3d-4cea7e03a88f.png">
 
    
-```
+
 **In Locally Weighted Linear Regression, the predictions made are a linear combination of the actual observed values of the dependent variable.**
 
 
