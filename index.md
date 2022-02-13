@@ -9,6 +9,7 @@ For project two, I applied two regression techniques on the Boston Housing Datas
 Snippet of Dataset: 
 <img width="1272" alt="Screen Shot 2022-02-12 at 9 25 52 PM" src="https://user-images.githubusercontent.com/71660299/153735617-137a6461-dc26-4c5e-b3de-52f41bd64b56.png">
 
+Descriptions of my process, code, and methods used will be described as follows:
 
 ### Locally Weighted Linear Regression (LOWESS)
 
