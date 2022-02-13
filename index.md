@@ -20,7 +20,9 @@ Stemming from Linear Regression, LOWESS can be considered a non-parametric algor
 
 ```markdown
 Equation for Locally Weighted Linear Regression:
-$$  \large \hat{y} = X (X^{T}WX)^{-1}(X^{T}Wy) $$
+$$
+\large \hat{y} = X (X^{T}WX)^{-1}(X^{T}Wy)
+$$
 
 - $ \hat{y}$ is obtained as a different linear combination of the values of y
 
