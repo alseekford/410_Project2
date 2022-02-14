@@ -164,6 +164,8 @@ I estimated a value for the LOWESS regressor using each kernel and k-fold cross 
   In a similar way to how LOWESS stems from linear regression, random forests are built upon decision trees. 
   Decision trees can be used to solve classification and regression problems, consisting of a top-down structure where each internal node represents a "test" on an attribute, each branch represents the outcome of the test, and each leaf node represents a class label (Liberman, 2020).  
   
+To visualize, here's an couple examples:
+  
   <p align = 'center'> <img width="627" alt="Screen Shot 2022-02-13 at 4 08 30 PM" src="https://user-images.githubusercontent.com/71660299/153775123-7eec698a-2374-4325-87c6-9c39efdd6fe7.png">
     
  <p align = 'center'>   <img width="517" alt="Screen Shot 2022-02-13 at 4 09 02 PM" src="https://user-images.githubusercontent.com/71660299/153775134-af560130-817a-4c04-bafd-b827cbcead8f.png"> (Javapoint)
