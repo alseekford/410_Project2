@@ -155,10 +155,9 @@ Additionally, I ran the regressor on three distinct kernels: Tricubic, Epanechni
   
   `def Quartic(x):
   return np.where(np.abs(x)>1,0,15/16*(1-np.abs(x)**2)**2)`
-  
 ```
 
-     <p align = 'center'> <img width="329" alt="Screen Shot 2022-02-15 at 2 17 25 PM" src="https://user-images.githubusercontent.com/71660299/154133016-b38988d1-59d1-41e8-9a67-f31d2fca978b.png">
+<p align = 'center'> <img width="329" alt="Screen Shot 2022-02-15 at 2 17 25 PM" src="https://user-images.githubusercontent.com/71660299/154133016-b38988d1-59d1-41e8-9a67-f31d2fca978b.png">
 
 
    
@@ -169,14 +168,9 @@ I estimated a value for the LOWESS regressor using each kernel and k-fold cross 
   To compare results, I calculated the mean squared error of each, which are as follows: 
   
 ```markdown
-
-
-  
   - LOWESS Tricubic 10-Fold Cross Validated MSE = $36,384.16
   - LOWESS Epanechnikov 10-Fold Cross Validated MSE = $36,453.06
   - LOWESS Quartic 10-Fold Cross Validated MSE = $36,341.57
-  
-
 ```
   
 
