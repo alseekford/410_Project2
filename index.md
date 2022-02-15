@@ -124,22 +124,43 @@ Finally, that takes us to the locally weighted regression we have:
 Additionally, I ran the regressor on three distinct kernels: Tricubic, Epanechnikov, and Quartic
   - Each kernel was specified in the "kern" parameter in the lowess_reg function
   
-```markdown
 
+ ##### Tricubic Kernel
+  
+  ```markdown
   `def tricubic(x):
   if len(x.shape) == 1:
     x = x.reshape(-1,1)
   d = np.sqrt(np.sum(x**2,axis=1))
   return np.where(d>1,0,70/81*(1-d**3)**3)`
+```
   
+ <p align = 'center'> <img width="283" alt="Screen Shot 2022-02-15 at 2 09 45 PM" src="https://user-images.githubusercontent.com/71660299/154131891-04e49192-cfc9-4a46-a438-5ae4e2313366.png">
+   
+   
+   
+  
+##### Epanechnikov Kernel
+   
+```markdown
   `def Epanechnikov(x):
   return np.where(np.abs(x)>1,0,3/4*(1-np.abs(x)**2))`
+```
+   <p align = 'center'> <img width="286" alt="Screen Shot 2022-02-15 at 2 12 35 PM" src="https://user-images.githubusercontent.com/71660299/154132313-f3684d72-c903-4087-a36d-b80e5f1abc36.png">
+   
+##### Quartic Kernel
+```markdown
   
   `def Quartic(x):
   return np.where(np.abs(x)>1,0,15/16*(1-np.abs(x)**2)**2)`
   
 ```
-  
+     <p align = 'center'> <img width="282" alt="Screen Shot 2022-02-15 at 2 13 50 PM" src="https://user-images.githubusercontent.com/71660299/154132497-de1e6f6d-baec-4e81-83e9-307c7a96ac6d.png">
+
+
+   
+
+
 I estimated a value for the LOWESS regressor using each kernel and k-fold cross validation 
   with 10 splits.
   To compare results, I calculated the mean squared error of each, which are as follows: 
@@ -164,7 +185,7 @@ I estimated a value for the LOWESS regressor using each kernel and k-fold cross 
   In a similar way to how LOWESS stems from linear regression, random forests are built upon decision trees. 
   Decision trees can be used to solve classification and regression problems, consisting of a top-down structure where each internal node represents a "test" on an attribute, each branch represents the outcome of the test, and each leaf node represents a class label (Liberman, 2020).  
   
-To visualize, here's an couple examples:
+  To visualize, here's an couple examples:
   
   <p align = 'center'> <img width="627" alt="Screen Shot 2022-02-13 at 4 08 30 PM" src="https://user-images.githubusercontent.com/71660299/153775123-7eec698a-2374-4325-87c6-9c39efdd6fe7.png">
     
@@ -178,13 +199,13 @@ To visualize, here's an couple examples:
   To reduce variance, random forest (as applied in this Boston Housing example) seperates the data into training and testing samples. In this case, 25% of the data went to test, while the remaining 75% was trained. An additional benefit of random forest is it prevents overfitting. 
    
    
-Here is an example of the structure: 
+  Here is an example of the structure: 
    
  <p align = 'center'>  <img width="665" alt="Screen Shot 2022-02-13 at 4 12 20 PM" src="https://user-images.githubusercontent.com/71660299/153775240-695a0dc8-95b6-434c-a005-c634c2ec240f.png"> (Javapoint)
 
 
   
-For Random Forest, I fit on the scaled data and plotted the results: 
+  For Random Forest, I fit on the scaled data and plotted the results: 
   
   
 ```markdown
@@ -197,7 +218,7 @@ For Random Forest, I fit on the scaled data and plotted the results:
  <p align = 'center'> <img width="631" alt="Screen Shot 2022-02-13 at 3 35 20 PM" src="https://user-images.githubusercontent.com/71660299/153773840-a73fac7e-06a9-45e9-8ed4-7181a1d04455.png">
    
    
-In order to improve upon this plot, it was necessary to sort the matrix by x values.
+  In order to improve upon this plot, it was necessary to sort the matrix by x values.
    By doing so, the y values will move accordingly and the plot improved signficantly. 
    
    
