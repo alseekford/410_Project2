@@ -134,8 +134,9 @@ Additionally, I ran the regressor on three distinct kernels: Tricubic, Epanechni
   d = np.sqrt(np.sum(x**2,axis=1))
   return np.where(d>1,0,70/81*(1-d**3)**3)`
 ```
-  
- <p align = 'center'> <img width="283" alt="Screen Shot 2022-02-15 at 2 09 45 PM" src="https://user-images.githubusercontent.com/71660299/154131891-04e49192-cfc9-4a46-a438-5ae4e2313366.png">
+ 
+
+ <p align = 'center'>  <img width="339" alt="Screen Shot 2022-02-15 at 2 21 56 PM" src="https://user-images.githubusercontent.com/71660299/154133638-e6b9fcb3-8e61-489b-88c1-7fab29dd0dce.png">
    
    
    
@@ -146,7 +147,8 @@ Additionally, I ran the regressor on three distinct kernels: Tricubic, Epanechni
   `def Epanechnikov(x):
   return np.where(np.abs(x)>1,0,3/4*(1-np.abs(x)**2))`
 ```
-   <p align = 'center'> <img width="286" alt="Screen Shot 2022-02-15 at 2 12 35 PM" src="https://user-images.githubusercontent.com/71660299/154132313-f3684d72-c903-4087-a36d-b80e5f1abc36.png">
+
+   <p align = 'center'> <img width="340" alt="Screen Shot 2022-02-15 at 2 20 06 PM" src="https://user-images.githubusercontent.com/71660299/154133385-5d68593b-806f-4ece-b90b-b668aee6ca10.png">
    
 ##### Quartic Kernel
 ```markdown
@@ -155,7 +157,8 @@ Additionally, I ran the regressor on three distinct kernels: Tricubic, Epanechni
   return np.where(np.abs(x)>1,0,15/16*(1-np.abs(x)**2)**2)`
   
 ```
-     <p align = 'center'> <img width="282" alt="Screen Shot 2022-02-15 at 2 13 50 PM" src="https://user-images.githubusercontent.com/71660299/154132497-de1e6f6d-baec-4e81-83e9-307c7a96ac6d.png">
+
+     <p align = 'center'> <img width="329" alt="Screen Shot 2022-02-15 at 2 17 25 PM" src="https://user-images.githubusercontent.com/71660299/154133016-b38988d1-59d1-41e8-9a67-f31d2fca978b.png">
 
 
    
